@@ -154,7 +154,7 @@ local function vapeGithubRequest(scripturl)
 				displayErrorPopup("The connection to github is taking a while, Please be patient.")
 			end
 		end)
-		suc, res = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VoidwareBakup/"..readfile("vape/commithash.txt").."/"..scripturl, true) end)
+		suc, res = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/WhichChapter/VoidwareBakup/"..readfile("vape/commithash.txt").."/"..scripturl, true) end)
 		if not suc or res == "404: Not Found" then
 			displayErrorPopup("Failed to connect to github : vape/"..scripturl.." : "..res)
 			error(res)
@@ -1997,10 +1997,10 @@ if shared.BACKUPTELEPORTMODE then
 					if isfile('vape/NewMainScript.lua') then
 						loadstring(readfile("vape/NewMainScript.lua"))()
 					else
-						loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua", true))()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/WhichChapter/vapeskidware/main/NewMainScript.lua", true))()
 					end
 				else
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua", true))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/WhichChapter/vapeskidware/main/NewMainScript.lua", true))()
 				end
 			]]
 			if shared.VapeDeveloper then
@@ -2053,10 +2053,10 @@ else
 							if isfile('vape/NewMainScript.lua') then
 								loadstring(readfile("vape/NewMainScript.lua"))()
 							else
-								loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua", true))()
+								loadstring(game:HttpGet("https://raw.githubusercontent.com/WhichChapter/vapeskidware/main/NewMainScript.lua", true))()
 							end
 						else
-							loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua", true))()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapeskidware/main/NewMainScript.lua", true))()
 						end
 					end
 				]]
@@ -2310,9 +2310,9 @@ local function loadVape()
 	end
 	--game:GetService("Players").LocalPlayer.GameplayPaused = false
 	if shared.CheatEngineMode then
-		if shared.CheatEngineMode and (not shared.VapeSwitchServers) then InfoNotification("Voidware", "Loaded in Cheat Engine Mode! Some functions might be missing.", 1.5) end
+		if shared.CheatEngineMode and (not shared.VapeSwitchServers) then InfoNotification("Skidware", "Loaded in Cheat Engine Mode! Some functions might be missing.", 1.5) end
 	else
-		InfoNotification("Voidware", "Successfully loaded Voidware :D", 1.5)
+		InfoNotification("Voidware", "Successfully loaded Skidware :D", 1.5)
 	end
 	coroutine.resume(saveSettingsLoop)
 	shared.VapeFullyLoaded = true
