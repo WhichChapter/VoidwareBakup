@@ -517,7 +517,7 @@ local function are_installed_2()
 end
 if not are_installed_1() then install_profiles(1) end
 if not are_installed_2() then install_profiles(2) end
-local url = shared.RiseMode and "https://github.com/VapeVoidware/VWRise/" or "https://github.com/VapeVoidware/VoidwareBakup"
+local url = shared.RiseMode and "https://github.com/WhichChapter/VWRise/" or "https://github.com/WhichChapter/VoidwareBakup"
 pcall(function()
     if not shared.VapeDeveloper then 
         local commit = "main"
@@ -569,7 +569,7 @@ pcall(function()
     end
     if not shared.VapeDeveloper then 
         local commit = "main"
-        for i,v in pairs(game:HttpGet("https://github.com/VapeVoidware/vapevoidware"):split("\n")) do 
+        for i,v in pairs(game:HttpGet("https://github.com/WhichChapter/vapeskidware"):split("\n")) do 
             if v:find("commit") and v:find("fragment") then 
                 local str = v:split("/")[5]
                 commit = str:sub(0, str:find('"') - 1)
@@ -590,7 +590,7 @@ pcall(function()
         end
     end
 end)
-local url = shared.RiseMode and "https://github.com/VapeVoidware/VWRise/" or "https://github.com/VapeVoidware/VoidwareBakup"
+local url = shared.RiseMode and "https://github.com/WhichChapter/VWRise/" or "https://github.com/WhichChapter/VoidwareBakup"
 local commit = "main"
 writefile(baseDirectory.."commithash2.txt", commit)
 shared.RiseMode = false
@@ -611,7 +611,7 @@ local function vapeGithubRequest(scripturl, isImportant)
         end
     end
     local suc, res
-    local url = (scripturl == "MainScript.lua" or scripturl == "GuiLibrary.lua") and shared.RiseMode and "https://raw.githubusercontent.com/VapeVoidware/VWRise/" or "https://raw.githubusercontent.com/VapeVoidware/VoidwareBakup/"
+    local url = (scripturl == "MainScript.lua" or scripturl == "GuiLibrary.lua") and shared.RiseMode and "https://raw.githubusercontent.com/WhichChapter/VWRise/" or "https://raw.githubusercontent.com/WhichChapter/VoidwareBakup/"
     suc, res = pcall(function() return game:HttpGet(url..commit.."/"..scripturl, true) end)
     if not suc or res == "404: Not Found" then
         if isImportant then
